@@ -74,24 +74,24 @@ if (num1 !== null || operator !== null || num2 !== null) {
     num2 = Number(num2.replace(/,/g, ".").trim());
     operator = operator.trim().toLowerCase();
     if (num1 !== NaN || num2 !== NaN) {
-        if ((operator === "/" || operator === ":") && num2 === 0) {
-            alert("Ділення на нуль неможливо виконати");
-        } else {
-            switch(operator) {
-                case "+":
-                    alert(`${num1} + ${num2} = ${num1 + num2}`);
-                    break;
-                case "-":
-                    alert(`${num1} + ${num2} = ${num1 - num2}`);
-                    break;
-                case "*": case "x":
-                    alert(`${num1} + ${num2} = ${num1 * num2}`);
-                    break;
-                case "/": case ":":
+        switch(operator) {
+            case "+":
+                alert(`${num1} + ${num2} = ${num1 + num2}`);
+                break;
+            case "-":
+                alert(`${num1} + ${num2} = ${num1 - num2}`);
+                break;
+            case "*": case "x":
+                alert(`${num1} + ${num2} = ${num1 * num2}`);
+                break;
+            case "/": case ":":
+                if (num2 === 0) {
+                    alert("Ділення на нуль неможливо виконати");
+                } else {
                     alert(`${num1} + ${num2} = ${num1 / num2}`);
-                    break;
-                default: alert("Помилка: неправильне заповнення");
-            }
+                }
+                break;
+            default: alert("Помилка: неправильне заповнення");
         }
     } else {
         alert("Помилка: неправильне заповнення");
