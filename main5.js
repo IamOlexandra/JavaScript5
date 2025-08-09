@@ -79,16 +79,16 @@ if (num1 !== null || operator !== null || num2 !== null) {
                 alert(`${num1} + ${num2} = ${num1 + num2}`);
                 break;
             case "-":
-                alert(`${num1} + ${num2} = ${num1 - num2}`);
+                alert(`${num1} - ${num2} = ${num1 - num2}`);
                 break;
             case "*": case "x":
-                alert(`${num1} + ${num2} = ${num1 * num2}`);
+                alert(`${num1} * ${num2} = ${num1 * num2}`);
                 break;
             case "/": case ":":
                 if (num2 === 0) {
                     alert("Ділення на нуль неможливо виконати");
                 } else {
-                    alert(`${num1} + ${num2} = ${num1 / num2}`);
+                    alert(`${num1} / ${num2} = ${num1 / num2}`);
                 }
                 break;
             default: alert("Помилка: неправильне заповнення");
